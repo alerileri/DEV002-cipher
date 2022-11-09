@@ -1,0 +1,29 @@
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFD372;
+}
+
+.miTítulo {
+    font-family: 'Poppins', sans-serif;
+    color: #FFD372;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #905E96;
+    color: #f6f6ef;
+    
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #AEA38B;
+    color: #403a3e;
+    
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b18ab6;
+    color: #1E1E1E;
+}
