@@ -3,12 +3,15 @@ const cipher = {
 
   encode(mensaje,desplazamiento){
     console.log(mensaje);
-    
+  
     //Variables
   //Alfabeto (string)
   let alfabeto="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
   },
   decode(mensaje,desplazamiento){
+    console.log(mensaje);
+    let alfabeto="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   },
 };

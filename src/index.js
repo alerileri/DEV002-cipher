@@ -23,3 +23,11 @@ cifrar.addEventListener("click", function () {
     let textEncode = cipher.encode(valueMessage, valueOffset)
     console.log(textEncode)
 });
+
+descifrar.addEventListener("click", function () {
+    let valueMessage = mensaje.value;
+    let valueOffset = numeroClave.value;
+    let textDecode = cipher.decode(valueMessage, valueOffset)
+    console.log(textDecode)
+});
+

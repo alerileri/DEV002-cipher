@@ -6,6 +6,8 @@ h1 {
 .miTítulo {
     font-family: 'Poppins', sans-serif;
     color: #FFD372;
+    text-align: center;
+
 }
 
 body {
@@ -26,4 +28,16 @@ input {
     font-family: 'Poppins', sans-serif;
     background-color: #b18ab6;
     color: #1E1E1E;
+}
+
+.buttonsArea {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.textBox {
+    display: flex;
+  align-items: center;
+  justify-content: center
 }
