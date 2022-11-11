@@ -5,7 +5,7 @@ import cipher from './cipher.js';
 // 2. DECLARACIÓN DE VARIABLES
 
 // Variable del texto que se ingrese en la caja de texto
-let mensaje = document.getElementByID("mensaje");
+let mensaje = document.getElementById("mensaje");
 // Variable del botón descifrar
 let descifrar = document.getElementById("descifrar");
 // Variable del botón cifrar
@@ -15,19 +15,28 @@ let numeroClave = document.getElementById("numeroClave");
 
 
 // 3. DECLARACIÓN DE FUNCIONES / EJECUCIÓN DEL CÓDIGO
+
+//-Función para cambiar el mensaje (string) a mayúsculas-
+//
+mensaje.addEventListener("keyup", function () {
+    this.value = this.value.toUpperCase();
+});
+
 //Función para elegir entre cifrar y descifrar; usar el módulo cipher
 //Función para que devuelva el mensaje
 cifrar.addEventListener("click", function () {
     let valueMessage = mensaje.value;
     let valueOffset = numeroClave.value;
-    let textEncode = cipher.encode(valueMessage, valueOffset)
-    console.log(textEncode)
+    let textEncode = cipher.encode(valueMessage, valueOffset);
+    console.log(textEncode);
+    mensaje.value = textEncode;
 });
 
 descifrar.addEventListener("click", function () {
     let valueMessage = mensaje.value;
     let valueOffset = numeroClave.value;
-    let textDecode = cipher.decode(valueMessage, valueOffset)
-    console.log(textDecode)
+    let textDecode = cipher.decode(valueMessage, valueOffset);
+    console.log(textDecode);
+    mensaje.value = textDecode;
 });
 

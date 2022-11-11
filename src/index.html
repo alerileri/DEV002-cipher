@@ -13,17 +13,22 @@
 
 <body>
   <header>
+    <br>
     <h1 class="miTítulo">Cifrado Cesar</h1>
-  </header>
+  </header> <br>
 
   <main>
-    <p class="buttonsArea"><button type="button" id="cifrar">Cifrar mensaje</button>
-      <button type="button" id="descifrar">Descifrar mensaje</button>
-      <input type="number" id="numeroClave" min="1" max="99"> 
+    <p class="buttonsArea"><input type="number" id="numeroClave" min="1" max="26">
+      <button type="button" id="cifrar">Cifrar</button>
+      <button type="button" id="descifrar">Descifrar</button>
+      
     </p>
     <p class="textBox">
-      <input type="textarea" id="mensaje" placeholder="Escribe tu mensaje">
+      <textarea type="text" id="mensaje" placeholder="Escribe tu mensaje" rows="5" cols="40"></textarea>
     </p>
+    <br>
+    <br>
+    <button type="button" class="question" id="question">?</button>
   </main>
   <script src="index.js" type="module"></script>
 

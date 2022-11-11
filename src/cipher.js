@@ -9,52 +9,60 @@ const cipher = {
   //4. Generar un nuevo string con la posición nueva
   //5. Convertir el arreglo encriptado a una cadena/string
 
-  encode(mensaje, desplazamiento) {
+  encode: function (mensaje, desplazamiento) {
+    console.log(mensaje, desplazamiento)
+    const encrypt = (char) => {
+      console.log(char);
+      console.log (char.charCodeAt())
+      console.log(String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65));
+      return String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65); // Solo esta línea no funciona !!!
+    }
+    let mensajeEnArray = mensaje.split("");
+    let mensajeCodifEnArray = mensajeEnArray.map((el) => {
+      return encrypt(el);
+    })
 
-    const encrypt = (char) =>
-      String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65);
-
-    const encryptMessage = (mensaje) =>
-      mensaje.split('').map((el) =>
-        encrypt(el));
+    console.log("resultadoFinal" + mensajeCodifEnArray.join(""));
+    return mensajeCodifEnArray.join("");
 
     //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
-    if (mensaje == []) {
-      throw new TypeError("Debes ingresar un número clave");
+    //if (mensaje == []) {
+    // throw new TypeError("Debes ingresar un número clave");
+    //Variables
 
-      console.log(mensaje);
+    //Variable para obtener el ASCII del string mensaje y después desplazarlo 
+    // con el offset ingresado en el input
 
-      //Variables
+    //Regresar el arreglo a una cadena
+  },
 
-      //Variable para obtener el ASCII del string mensaje y después desplazarlo 
-      // con el offset ingresado en el input
+  decode: function (mensaje, desplazamiento) {
+    console.log(mensaje);
+    const encrypt = (char) => {
+      console.log("letra" + char); //
+      console.log (char.charCodeAt()); //
+      console.log("encrypt" + String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65));
+      return String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65);
 
-
-      //Regresar el arreglo a una cadena
 
     }
-
-  },
-  decode(mensaje, desplazamiento) {
-    console.log(mensaje);
-   
-    const encrypt = (char) =>
-    String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65);
-
-  const encryptMessage = (mensaje) =>
-    mensaje.split('').map((el) =>
-      encrypt(el));
-
-  },
-
-  export default cipher;
+    let arrayDelMensaje = mensaje.split("");
+    console.log("array descifrado" + arrayDelMensaje);
+    let mensajeFinal = arrayDelMensaje.map((el) => {
+      return encrypt(el);
+    })
+    console.log ("mensaje descifrado" + mensajeFinal.join (""));
+    return mensajeFinal.join("");
+  }
+}
+export default cipher;
 
 
   //Funciones
 
   //Fórmula Michelle
   //(x-65+n)%26+65
-  // let 
+  // let
 
   //"a".charCodeAt()
   //"Z".charCodeAt
@@ -66,16 +74,12 @@ const cipher = {
   //const encrypt = (char)=>
   // String.fromCharCode((char.charCodeAt()-65+3)%26+65);
 
-  //const encryptMessage = (mensaje) => 
-  //mensaje.split('').map((el) => 
+  //const encryptMessage = (mensaje) =>
+  //mensaje.split('').map((el) =>
   //encrypt (el));
 
 
 
 
 
-
-
-
-}
   //Probar switch para insertar el valor de desplazamiento

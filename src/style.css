@@ -41,3 +41,20 @@ input {
   align-items: center;
   justify-content: center
 }
+
+textarea {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b18ab6;
+    color: #1E1E1E;
+    resize: none;
+}
+
+.question {
+    font-family: 'Poppins', sans-serif;
+    background-color: #AEA38B;
+    color: #403a3e;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
