@@ -12,7 +12,7 @@ const cipher = {
   encode(mensaje, desplazamiento) {
 
     const encrypt = (char) =>
-      String.fromCharCode((char.charCodeAt() - 65 + 3) % 26 + 65);
+      String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65);
 
     const encryptMessage = (mensaje) =>
       mensaje.split('').map((el) =>
@@ -37,7 +37,13 @@ const cipher = {
   },
   decode(mensaje, desplazamiento) {
     console.log(mensaje);
+   
+    const encrypt = (char) =>
+    String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65);
 
+  const encryptMessage = (mensaje) =>
+    mensaje.split('').map((el) =>
+      encrypt(el));
 
   },
 
