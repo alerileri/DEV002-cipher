@@ -24,6 +24,12 @@ button {
     
 }
 
+.offset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 input {
     font-family: 'Poppins', sans-serif;
     background-color: #b18ab6;
@@ -51,10 +57,14 @@ textarea {
 
 .question {
     font-family: 'Poppins', sans-serif;
+      font-size: 20px; /* Cambiar el tamaño de la tipografia */
+	font-weight: bold; /* Fuente en negrita o bold */
+	border-radius: 15px; /* Borde del boton */
     background-color: #AEA38B;
     color: #403a3e;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+  
     
 }

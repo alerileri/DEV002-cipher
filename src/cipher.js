@@ -2,20 +2,17 @@ const cipher = {
   // Código de cifrado y descifrado
 
   //Checklist
-  //1. Obtener las letras del mensaje como un string [YA]
-  //2. Obtener el número de posición de cada elemento de ese string [YA]
+  //1. Obtener las letras del mensaje como un string [ ]
+  //2. Obtener el número de posición de cada elemento de ese string [ ]
   //comparándolo con el string alfabeto
-  //3. Sumarle a esa posición el número de desplazamiento (offset) [YA]
+  //3. Sumarle a esa posición el número de desplazamiento (offset) [ ]
   //4. Generar un nuevo string con la posición nueva
   //5. Convertir el arreglo encriptado a una cadena/string
 
   encode: function (mensaje, desplazamiento) {
     console.log(mensaje, desplazamiento)
     const encrypt = (char) => {
-      console.log(char);
-      console.log (char.charCodeAt())
-      console.log(String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65));
-      return String.fromCharCode((char.charCodeAt() - 65 + desplazamiento) % 26 + 65); // Solo esta línea no funciona !!!
+      return String.fromCharCode((char.charCodeAt() - 65 + parseInt(desplazamiento)) % 26 + 65); // Solo esta línea no funciona !!!
     }
     let mensajeEnArray = mensaje.split("");
     let mensajeCodifEnArray = mensajeEnArray.map((el) => {
@@ -37,12 +34,11 @@ const cipher = {
   },
 
   decode: function (mensaje, desplazamiento) {
-    console.log(mensaje);
     const encrypt = (char) => {
-      console.log("letra" + char); //
-      console.log (char.charCodeAt()); //
+      console.log("letra" + char); //BORRAR
+      console.log (char.charCodeAt()); //BORRAR
       console.log("encrypt" + String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65));
-      return String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65);
+      return String.fromCharCode((char.charCodeAt() - 65 - parseInt(desplazamiento)) % 26 + 65);
 
 
     }
@@ -60,9 +56,6 @@ export default cipher;
 
   //Funciones
 
-  //Fórmula Michelle
-  //(x-65+n)%26+65
-  // let
 
   //"a".charCodeAt()
   //"Z".charCodeAt
