@@ -9,6 +9,16 @@ const cipher = {
   //4. Generar un nuevo string con la posición nueva
   //5. Convertir el arreglo encriptado a una cadena/string
 
+  // if (desplazamiento == null || mensaje == []) {
+     // throw new TypeError("¡Error! Escribe un mensaje y elige el número de desplazamiento"); }
+
+    //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
+   // if (mensaje == []) {
+     // throw new TypeError("Debes ingresar un mensaje"); }
+      //Enviar error si no ingresa un número de desplazamiento
+   // if (desplazamiento == []) {
+       // throw new TypeError("Debes ingresar un número clave");  }
+
   encode: function (mensaje, desplazamiento) {
     console.log(mensaje, desplazamiento)
     const encrypt = (char) => {
@@ -21,14 +31,6 @@ const cipher = {
 
     console.log("resultadoFinal" + mensajeCodifEnArray.join(""));
     return mensajeCodifEnArray.join("");
-
-    //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
-  if (mensaje == []) {
-  throw new TypeError("Debes ingresar un mensaje");
-  }
-  if (desplazamiento == []) {
-    throw new TypeError("Debes ingresar un número clave");
-  }
     
     //Variable para obtener el ASCII del string mensaje y después desplazarlo 
     // con el offset ingresado en el input
@@ -38,8 +40,6 @@ const cipher = {
 
   decode: function (mensaje, desplazamiento) {
     const encrypt = (char) => {
-      console.log("letra" + char); //BORRAR
-      console.log (char.charCodeAt()); //BORRAR
       console.log("encrypt" + String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65));
       return String.fromCharCode((char.charCodeAt() - 65 - parseInt(desplazamiento)) % 26 + 65);
 
@@ -53,7 +53,15 @@ const cipher = {
     console.log ("mensaje descifrado" + mensajeFinal.join (""));
     return mensajeFinal.join("");
   }
+
 }
+    //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
+   // if (mensaje == []) {
+     // throw new TypeError("Debes ingresar un mensaje"); }
+      //Enviar error si no ingresa un número de desplazamiento
+   // if (desplazamiento == []) {
+       // throw new TypeError("Debes ingresar un número clave");  }
+
 export default cipher;
 
 
