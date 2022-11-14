@@ -23,10 +23,13 @@ const cipher = {
     return mensajeCodifEnArray.join("");
 
     //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
-    //if (mensaje == []) {
-    // throw new TypeError("Debes ingresar un número clave");
-    //Variables
-
+  if (mensaje == []) {
+  throw new TypeError("Debes ingresar un mensaje");
+  }
+  if (desplazamiento == []) {
+    throw new TypeError("Debes ingresar un número clave");
+  }
+    
     //Variable para obtener el ASCII del string mensaje y después desplazarlo 
     // con el offset ingresado en el input
 
@@ -54,25 +57,4 @@ const cipher = {
 export default cipher;
 
 
-  //Funciones
-
-
-  //"a".charCodeAt()
-  //"Z".charCodeAt
-  //"A".charCodeAt()
-  //("A".charCodeAt()-65+3)%26+65
-
-  //encode(mensaje,desplazamiento){
-
-  //const encrypt = (char)=>
-  // String.fromCharCode((char.charCodeAt()-65+3)%26+65);
-
-  //const encryptMessage = (mensaje) =>
-  //mensaje.split('').map((el) =>
-  //encrypt (el));
-
-
-
-
-
-  //Probar switch para insertar el valor de desplazamiento
+ 
