@@ -12,7 +12,7 @@ let descifrar = document.getElementById("descifrar");
 let cifrar = document.getElementById("cifrar");
 // variable input de números / desplazamiento
 let numeroClave = document.getElementById("numeroClave");
-
+// Variable para el botón ?
 
 // 3. DECLARACIÓN DE FUNCIONES / EJECUCIÓN DEL CÓDIGO
 
