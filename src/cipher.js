@@ -1,4 +1,10 @@
 const cipher = {
+  
+    // Enviar error si no ingresa un número de desplazamiento
+    
+  
+  
+  
   // Código de cifrado y descifrado
 
   // if (desplazamiento == null || mensaje == []) {
@@ -8,10 +14,16 @@ const cipher = {
    // if (mensaje == []) {
      // throw new TypeError("Debes ingresar un mensaje"); }
       //Enviar error si no ingresa un número de desplazamiento
-   // if (desplazamiento == []) {
-       // throw new TypeError("Debes ingresar un número clave");  }
+   //if (desplazamiento == null) {
+       //throw new TypeError("Debes ingresar un número clave"); 
+      // }
 
   encode: function (mensaje, desplazamiento) {
+
+    if (desplazamiento == null || mensaje==[]) {
+      throw TypeError("Ingresa la información solicitada"); 
+       }
+
     console.log(mensaje, desplazamiento)
     const encrypt = (char) => {
       return String.fromCharCode((char.charCodeAt() - 65 + parseInt(desplazamiento)) % 26 + 65); // Solo esta línea no funciona !!!
@@ -31,10 +43,13 @@ const cipher = {
   },
 
   decode: function (mensaje, desplazamiento) {
+    if (desplazamiento == null || mensaje==[]) {
+      throw TypeError("Ingresa la información solicitada"); 
+       }
+       
     const encrypt = (char) => {
       console.log("encrypt" + String.fromCharCode((char.charCodeAt() - 65 - desplazamiento) % 26 + 65));
       return String.fromCharCode((char.charCodeAt() - 65 - parseInt(desplazamiento)) % 26 + 65);
-
 
     }
     let arrayDelMensaje = mensaje.split("");
@@ -48,12 +63,10 @@ const cipher = {
 
 }
     //Enviar error si no ingresa un mensaje a cifrar o descifrar (string)
-   // if (mensaje == []) {
-     // throw new TypeError("Debes ingresar un mensaje"); }
-      //Enviar error si no ingresa un número de desplazamiento
-   // if (desplazamiento == []) {
-       // throw new TypeError("Debes ingresar un número clave");  }
-
+    //if (mensaje == []) {
+     // throw new TypeError("Debes ingresar un mensaje"); 
+    //}
+   
 export default cipher;
 
 

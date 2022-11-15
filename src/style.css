@@ -14,13 +14,10 @@ h1 {
 body {
     background-color: #905E96;
     font-family: 'Poppins', sans-serif;
-    color: #f6f6ef;
-}
+    color: #FFD372;
+    background-image: url("https://imagizer.imageshack.com/v2/1280x1024q90/922/bdOeup.jpg");
 
-img {
-    max-width: 100%;
-    height: auto;
-  }
+}
 
 button {
     font-family: 'Poppins', sans-serif;
