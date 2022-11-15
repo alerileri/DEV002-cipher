@@ -1,14 +1,6 @@
 const cipher = {
   // Código de cifrado y descifrado
 
-  //Checklist
-  //1. Obtener las letras del mensaje como un string [ ]
-  //2. Obtener el número de posición de cada elemento de ese string [ ]
-  //comparándolo con el string alfabeto
-  //3. Sumarle a esa posición el número de desplazamiento (offset) [ ]
-  //4. Generar un nuevo string con la posición nueva
-  //5. Convertir el arreglo encriptado a una cadena/string
-
   // if (desplazamiento == null || mensaje == []) {
      // throw new TypeError("¡Error! Escribe un mensaje y elige el número de desplazamiento"); }
 

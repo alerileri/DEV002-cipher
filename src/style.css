@@ -11,14 +11,15 @@ h1 {
 }
 
 body {
-    
-    background-image: url("/Cipher.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: #905E96;
     font-family: 'Poppins', sans-serif;
     color: #f6f6ef;
     
+}
+
+.imagenFondo {
+    height: 400px;
+    width: 200px;
 }
 
 button {
